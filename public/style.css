@@ -1,0 +1,76 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+}
+
+header {
+  padding: 2rem;
+  background: rgba(0,0,0,0.3);
+}
+header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+header p { font-size: 1.2rem; opacity: 0.9; }
+
+.hero {
+  padding: 4rem 1rem;
+}
+.hero h2 { font-size: 2.8rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.4rem; max-width: 600px; margin: 0 auto; }
+
+.apps {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.apps h2 { margin-bottom: 2rem; font-size: 2rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+}
+.card:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.2);
+}
+.card .icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.btn {
+  background: #00ff88;
+  color: #000;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.btn:hover {
+  background: #00cc66;
+  transform: scale(1.05);
+}
+
+footer {
+  padding: 2rem;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
