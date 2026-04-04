@@ -3,7 +3,6 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
@@ -37,8 +36,9 @@ app.get('/', (req, res) => {
 // Exportamos app para Vercel
 module.exports = app;
 
-// Solo ejecutar listen si NO estamos en Vercel
-if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+// Solo para desarrollo local
+if (require.main === module) {
+  const PORT = process.env.PORT || 3000;
   app.listen(PORT, () => {
     console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
     loadApps();
