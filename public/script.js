@@ -1,30 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  emailjs.init("-Nw1j0pJU4DnYanCi");
-
-  const grid = document.getElementById('apps-grid');
-
-  const apps = [
-    { name: "X", url: "https://x.com/TormenteraXpres", icon: "𝕏" },
-    { name: "Facebook", url: "https://facebook.com/TormenterasExpress", icon: "f" },
-    { name: "Instagram", url: "https://instagram.com/tormenteras_express", icon: "📷" },
-    { name: "TikTok", url: "https://tiktok.com/@Tormenteras.expre", icon: "♪" },
-    { name: "YouTube", url: "https://youtube.com/@tormenterasexpress", icon: "▶" },
-    { name: "Truth Social", url: "https://truthsocial.com/@TormenterasExpress", icon: "T" }
-  ];
-
-  grid.innerHTML = '';
-
-  apps.forEach(app => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = `
-      <span class="icon">${app.icon}</span>
-      <h3>${app.name}</h3>
-      <a href="${app.url}" target="_blank" class="btn">Ir ahora →</a>
-    `;
-    grid.appendChild(card);
-  });
-
   // Botón grande Contáctanos
   const headerBtn = document.getElementById('contact-btn-header');
   if (headerBtn) {
@@ -58,7 +32,7 @@ function showContactModal() {
 
 function showEmailForm() {
   closeModal();
-  alert("Formulario de Email se abrirá aquí.\n\n(Lo podemos mejorar más adelante con campos completos)");
+  alert("Formulario de Email se abrirá aquí.\n\n(Lo expandiremos más adelante con EmailJS completo)");
 }
 
 function closeModal() {
