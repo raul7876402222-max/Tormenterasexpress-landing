@@ -3,10 +3,11 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-// Middleware
-app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+// Middleware para servir archivos estáticos desde la raíz y desde public/
+app.use(express.static(path.join(__dirname)));           // Sirve archivos de la raíz (background.jpg)
+app.use(express.static(path.join(__dirname, 'public'))); // Sirve archivos de public/
 
 // Cargar apps desde apps.json
 let apps = [];
@@ -36,9 +37,8 @@ app.get('/', (req, res) => {
 // Exportamos app para Vercel
 module.exports = app;
 
-// Solo para desarrollo local
-if (require.main === module) {
-  const PORT = process.env.PORT || 3000;
+// Solo ejecutar listen si NO estamos en Vercel
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
   app.listen(PORT, () => {
     console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
     loadApps();
