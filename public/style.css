@@ -24,7 +24,7 @@ body::before {
   z-index: -1;
 }
 
-/* Título neon */
+/* Resto del CSS (título, tarjetas, móvil, etc.) */
 .neon-title {
   font-size: 4.2rem;
   font-weight: 900;
@@ -47,7 +47,6 @@ body::before {
   font-weight: bold;
 }
 
-/* Grid de tarjetas */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -73,7 +72,6 @@ body::before {
   background: rgba(255, 255, 255, 0.18);
 }
 
-/* Botones pasteles */
 .btn {
   padding: 0.75rem 1.8rem;
   border-radius: 50px;
@@ -104,41 +102,18 @@ footer {
   font-size: 0.95rem;
 }
 
-/* ==================== MÓVIL ==================== */
+/* Responsive Móvil */
 @media (max-width: 768px) {
-  .neon-title {
-    font-size: 2.6rem;
-  }
-
-  .phone-neon {
-    font-size: 1.35rem;
-    margin-bottom: 2.5rem;
-  }
-
+  .neon-title { font-size: 2.6rem; }
+  .phone-neon { font-size: 1.35rem; margin-bottom: 2.5rem; }
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
     gap: 1.1rem;
     padding-top: 4rem;
-    padding-bottom: 2rem;
-  }
-
-  .card {
-    padding: 1.3rem 0.8rem;
-  }
-
-  .btn {
-    padding: 0.7rem 1.6rem;
-    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 480px) {
-  .neon-title {
-    font-size: 2.3rem;
-  }
-
-  .grid {
-    gap: 1rem;
-    padding-top: 3.5rem;
-  }
+  .neon-title { font-size: 2.3rem; }
+  .grid { padding-top: 3.5rem; }
 }
