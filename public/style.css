@@ -26,7 +26,7 @@ body::before {
 
 /* Título neon */
 .neon-title {
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -35,53 +35,53 @@ body::before {
     0 0 40px #ff00ff,
     0 0 80px #ff00ff,
     0 0 120px #ff00ff;
-  margin: 3rem 0 0.5rem;
-  padding-top: 3rem;
+  margin: 2.5rem 0 0.5rem;
+  padding-top: 2rem;
 }
 
 .phone-neon {
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   color: #ff00ff;
-  text-shadow: 0 0 25px #ff00ff;
-  margin-bottom: 4rem;
+  text-shadow: 0 0 20px #ff00ff;
+  margin-bottom: 3.5rem;
   font-weight: bold;
 }
 
-/* Grid de tarjetas - Bajadas significativamente */
+/* Grid principal */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 1.8rem;
-  padding-top: 8rem;        /* ← Bajado más (2 líneas aprox) */
-  padding-bottom: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.4rem;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 .card {
   background: rgba(255, 255, 255, 0.12);
-  border-radius: 20px;
-  padding: 1.8rem 1rem;
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 18px;
+  padding: 1.6rem 1rem;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.4s ease;
   height: 100%;
 }
 
 .card:hover {
-  transform: translateY(-12px);
-  background: rgba(255, 255, 255, 0.20);
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.18);
 }
 
-/* Botones pasteles ovalados */
+/* Botones pasteles */
 .btn {
-  padding: 0.8rem 2rem;
+  padding: 0.75rem 1.8rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
   margin-top: 1rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
   transition: all 0.3s;
 }
 
@@ -89,17 +89,56 @@ body::before {
   transform: scale(1.08);
 }
 
-/* Colores pasteles suaves */
-.card:nth-child(1) .btn { background: #c4d0ff; color: #1e2937; }   /* X */
-.card:nth-child(2) .btn { background: #a5d6ff; color: #1e2937; }   /* Facebook */
-.card:nth-child(3) .btn { background: #f8c4e0; color: #1e2937; }   /* Instagram */
-.card:nth-child(4) .btn { background: #a3f7d4; color: #1e2937; }   /* TikTok */
-.card:nth-child(5) .btn { background: #ffe0b8; color: #1e2937; }   /* YouTube */
-.card:nth-child(6) .btn { background: #d8c4ff; color: #1e2937; }   /* Truth Social */
-.card:nth-child(7) .btn { background: #ffe4b8; color: #1e2937; }   /* Contacto */
+/* Colores pasteles */
+.card:nth-child(1) .btn { background: #c4d0ff; color: #1e2937; }
+.card:nth-child(2) .btn { background: #a5d6ff; color: #1e2937; }
+.card:nth-child(3) .btn { background: #f8c4e0; color: #1e2937; }
+.card:nth-child(4) .btn { background: #a3f7d4; color: #1e2937; }
+.card:nth-child(5) .btn { background: #ffe0b8; color: #1e2937; }
+.card:nth-child(6) .btn { background: #d8c4ff; color: #1e2937; }
+.card:nth-child(7) .btn { background: #ffe4b8; color: #1e2937; }
 
 footer {
-  padding: 4rem 1rem 2rem;
-  opacity: 0.9;
-  font-size: 1rem;
+  padding: 3rem 1rem 2rem;
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+/* ==================== MÓVIL ==================== */
+@media (max-width: 768px) {
+  .neon-title {
+    font-size: 2.6rem;
+  }
+
+  .phone-neon {
+    font-size: 1.35rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 1.1rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  .card {
+    padding: 1.3rem 0.8rem;
+  }
+
+  .btn {
+    padding: 0.7rem 1.6rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .neon-title {
+    font-size: 2.3rem;
+  }
+
+  .grid {
+    gap: 1rem;
+    padding-top: 3.5rem;
+  }
 }

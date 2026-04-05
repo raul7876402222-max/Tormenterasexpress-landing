@@ -12,5 +12,8 @@
       "dest": "/server.js"
     }
   ],
-  "public": "public"
+  "public": "public",
+  "static": {
+    "public": "public"
+  }
 }
